@@ -23,5 +23,5 @@
 # m h  dom mon dow   command
 20 2 * * * /root/get_mc.expect > get_mc.log 2>&1
 23 2 * * * unzip -o /root/world.zip -d /root > unzip_world.log 2>&1
-55 2 * * * /root/minecraft_maps/render_mcmaps.bash > render_mcmaps.log 2>&1
+25 2 * * * /root/minecraft_maps/render_mcmaps.bash > render_mcmaps.log 2>&1
 45 2 * * * /root/Minecraft-Overviewer/overviewer.py --config=/root/minecraft_maps/mca_config.txt > overviewer.log 2>&1
