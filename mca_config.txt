@@ -1,0 +1,78 @@
+worlds["amazon1"] = "/root/world"
+
+def playerIcons(poi):
+    if poi['id'] == 'Player':
+        poi['icon'] = "https://www.detwa.com/images/minecraft_guy.png"
+        return "Last known location for %s" % poi['EntityId']
+
+renders["amazon1day"] = {
+    "world": "amazon1",
+    "title": " Daytime",
+    "rendermode": smooth_lighting,
+    "dimension": "overworld",
+    "markers":[dict(name="All players", filterFunction=playerIcons)]
+}
+
+renders["amazon1daysouth"] = {
+    "world": "amazon1",
+    "title": " Daytime Facing South",
+    "rendermode": smooth_lighting,
+    "dimension": "overworld",
+    "northdirection" : "lower-right",
+    "markers":[dict(name="All players", filterFunction=playerIcons)]
+}
+
+renders["amazon1night"] = {
+    "world": "amazon1",
+    "title": " Nighttime",
+    "rendermode": smooth_night,
+    "dimension": "overworld",
+    "markers":[dict(name="All players", filterFunction=playerIcons)]
+}
+
+renders["amazon1nightsouth"] = {
+    "world": "amazon1",
+    "title": "Nighttime Facing South",
+    "rendermode": smooth_night,
+    "dimension": "overworld",
+    "northdirection" : "lower-right",
+    "markers":[dict(name="All players", filterFunction=playerIcons)]
+}
+
+renders["amazonlcave"] = {
+    "world": "amazon1",
+    "title": " Caves",
+    "rendermode": cave,
+    "dimension": "overworld",
+    "markers":[dict(name="All players", filterFunction=playerIcons)]
+}
+
+renders["amazonlcavesouth"] = {
+    "world": "amazon1",
+    "title": " Caves Facing South",
+    "rendermode": cave,
+    "dimension": "overworld",
+    "northdirection" : "lower-right",
+    "markers":[dict(name="All players", filterFunction=playerIcons)]
+}
+
+renders["amazon1nether"] = {
+    "world": "amazon1",
+    "title": " Nether",
+    "rendermode": nether_smooth_lighting,
+    "dimension": "nether",
+    "markers":[dict(name="All players", filterFunction=playerIcons)]
+}
+
+renders["amazon1nethersouth"] = {
+    "world": "amazon1",
+    "title": " Nether Facing South",
+    "rendermode": nether_smooth_lighting,
+    "dimension": "nether",
+    "northdirection" : "lower-right",
+    "markers":[dict(name="All players", filterFunction=playerIcons)]
+}
+
+outputdir = "/var/www/html/overviewer"
+
+
